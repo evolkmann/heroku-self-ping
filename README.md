@@ -5,6 +5,11 @@ To avoid the one-hour time limit on your dyno, use this npm module:
 
 ```js
 require('heroku-self-ping')("http://your-app-url");
+// or:
+
+import * as herokuSelfPing from 'heroku-self-ping';
+// later in your code...
+herokuSelfPing("http://your-app-url");
 ```
 
 This will register a timer self-pinging your app every 20 minutes.

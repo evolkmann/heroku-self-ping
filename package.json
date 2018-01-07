@@ -4,7 +4,7 @@
   "author": "Matthieu Bacconnier <matthieu@anyfetch.com>",
   "bin": {},
   "scripts": {
-    "test": "NODE_ENV=test mocha -R spec test.js"
+    "test": "mocha --require babel-register index.spec.js"
   },
   "main": "./index.js",
   "repository": {
@@ -21,7 +21,11 @@
     "request": "~2.81.0"
   },
   "devDependencies": {
-    "mocha": "~3.1.2"
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.1.2",
+    "proxyquire": "^1.8.0"
   },
   "licence": "MIT",
   "engines": {
